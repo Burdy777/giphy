@@ -1,0 +1,13 @@
+<div class="dropdown">
+    <button (click)="toggleDropdown = !toggleDropdown" class="dropbtn">Dropdown</button>
+    <div id="myDropdown" class="dropdown-content" [ngClass]="{'show': toggleDropdown}">
+      <input type="text" placeholder="Search.." id="myInput" (keyup)="filterFunction($event.target.value)">
+      <span>About</span>
+      <span>Base</span>
+      <span >Blog</span>
+      <span >Contact</span>
+      <span >Custom</span>
+      <span>Support</span>
+      <span>Tools</span>
+    </div>
+  </div>

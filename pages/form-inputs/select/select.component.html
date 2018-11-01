@@ -1,0 +1,7 @@
+<select (change)="getGender($event.target.value)">
+    <div>
+      <input type="search" value="kk"/>
+    </div>
+    <option selected> gender </option>
+    <option *ngFor="let g of genders" [value]="g" > {{ g }} </option>
+  </select>

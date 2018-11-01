@@ -1,0 +1,17 @@
+<section>
+  <!-- filter by select -->
+  <app-select (gender)="getGender($event)"></app-select>
+  <p *ngFor="let n of names"> {{ n }} </p>
+
+  <!-- button with input and select -->
+  <app-dropdown (filter)="filterFunction($event)"></app-dropdown>
+
+  <!-- filter  input text-->
+  <app-input (student)="getStudent($event)"></app-input>
+  <p *ngIf="student">
+    {{ student.name }} {{ student.age }} et je suis un {{ student.sexe === 'man' ? 'un homme' : 'une femme' }}
+  </p>
+
+  <!-- Api -->
+  <app-button (movie)="getMovie()"></app-button>
+</section>
